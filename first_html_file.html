@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с фоном</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('avia.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            padding: 20px;
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 50px;
+            border-radius: 10px;
+        }
+
+        .button {
+            padding: 20px;              /* Внутренний отступ: 20 пикселей */
+            color: red;                 /* Цвет текста: красный */
+            text-align: center;         /* Выравнивание текста: по центру */
+            background-color: rgba(0, 0, 0, 0.5);  /* Цвет фона: черный с прозрачностью 50% */
+            margin: 50px;               /* Внешний отступ: 50 пикселей */
+            border-radius: 0px;        /* Скругление углов: 10 пикселей */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="button">
+        <p>cкебоб</p>
+    </div>
+    <div class="content">
+        <h1>Моя страница с фоном</h1>
+    </div>
+</body>
+</html>
