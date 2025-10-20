@@ -66,6 +66,7 @@
 
 </head>
 <body>
+
     <div class="content">
         <h1>Лёвиасейлс</h1>
     </div>
@@ -79,8 +80,11 @@
         <input type="tel" placeholder="Номер телефона">
         <input type="email" placeholder="Почта">
     </form>
-
+    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
     <script>
+
+
+        let tg = window.Telegram.webapp
         let buy = document.getElementById('buy');
 
         buy.addEventListener('click', ()=> {
