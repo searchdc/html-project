@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница с фоном</title>
-    <style>
+        <style>
         body {
             margin: 0;
             padding: 0;
@@ -22,27 +23,74 @@
             color: white;
             text-align: center;
             background-color: rgba(0, 0, 0, 0.5);
-            margin: 50px;
+            margin: 40px;
+            border-radius: 100px;
+        }
+
+        button {
+
+            background-color: #000000;
+            color: white;
+            padding: 15px 65px;
             border-radius: 10px;
+            transition: all 200ms ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            margin: 0 auto;
+
         }
 
-        .button {
-            padding: 20px;              /* Внутренний отступ: 20 пикселей */
-            color: red;                 /* Цвет текста: красный */
-            text-align: center;         /* Выравнивание текста: по центру */
-            background-color: rgba(0, 0, 0, 0.5);  /* Цвет фона: черный с прозрачностью 50% */
-            margin: 50px;               /* Внешний отступ: 50 пикселей */
-            border-radius: 0px;        /* Скругление углов: 10 пикселей */
+        button:hover {
+            background-color: #FFFFFF;
+            color: black;
         }
 
-    </style>
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            width: 250px;
+            text-align: center;
+        }
+
+        #form {
+            display: none;
+            text-align: center;
+        }
+
+        </style>
+
 </head>
 <body>
-    <div class="button">
-        <p>cкебоб</p>
-    </div>
     <div class="content">
-        <h1>Моя страница с фоном</h1>
+        <h1>Лёвиасейлс</h1>
     </div>
+
+    <div id="main">
+        <button id="buy">Купить</button>
+    </div>
+
+    <form id="form">
+        <input type="text" placeholder="Имя">
+        <input type="tel" placeholder="Номер телефона">
+        <input type="email" placeholder="Почта">
+    </form>
+
+    <script>
+        let buy = document.getElementById('buy');
+
+        buy.addEventListener('click', ()=> {
+            document.getElementById('main').style.display = none;
+            document.getElementById('form').style.display = block;
+        }
+
+
+
+
+    </script>
 </body>
 </html>
