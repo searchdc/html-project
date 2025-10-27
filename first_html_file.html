@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница с фоном</title>
-        <style>
+    <style>
         body {
             margin: 0;
             padding: 0;
@@ -28,7 +27,6 @@
         }
 
         button {
-
             background-color: #000000;
             color: white;
             padding: 15px 65px;
@@ -39,7 +37,6 @@
             font-size: 16px;
             display: flex;
             margin: 0 auto;
-
         }
 
         button:hover {
@@ -61,9 +58,7 @@
             display: none;
             text-align: center;
         }
-
-        </style>
-
+    </style>
 </head>
 <body>
 
@@ -76,27 +71,43 @@
     </div>
 
     <form id="form">
-        <input type="text" placeholder="Имя">
-        <input type="tel" placeholder="Номер телефона">
-        <input type="email" placeholder="Почта">
+        <input id="name" type="text" placeholder="Имя">
+        <input id="phone" type="tel" placeholder="Номер телефона">
+        <input id="email" type="email" placeholder="Почта">
+        <button type="button" id="send">Отправить</button>
     </form>
+
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
     <script>
 
-
+        //Данные выводятся в консоль и можно их передать дальше
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById('buy');
+        let form = document.getElementById('form');
+        let send = document.getElementById('send');
 
-        buy.addEventListener('click', ()=> {
-            document.getElementById('main').style.display = none;
-            document.getElementById('form').style.display = block;
+        // Показ формы
+        buy.addEventListener('click', () => {
+            buy.style.display = 'none';
+            form.style.display = 'block';
         });
 
+        // Сохранение данных в словарь
+        send.addEventListener('click', () => {
+            let userData = {
+                name: document.getElementById('name').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                email: document.getElementById('email').value.trim()
+            };
 
+            console.log("Данные пользователя:", userData);
 
+            // Можно, например, отправить в Telegram WebApp
+            // tg.sendData(JSON.stringify(userData));
 
+            alert("Данные сохранены!");
+        });
     </script>
 </body>
 </html>
-
 
