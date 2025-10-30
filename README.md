@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница с фоном</title>
-        <style>
+    <style>
         body {
             margin: 0;
             padding: 0;
-            background-image: url('avia.jpg');
+            background-image: url('avia2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -28,7 +27,6 @@
         }
 
         button {
-
             background-color: #000000;
             color: white;
             padding: 15px 65px;
@@ -39,7 +37,6 @@
             font-size: 16px;
             display: flex;
             margin: 0 auto;
-
         }
 
         button:hover {
@@ -61,36 +58,5 @@
             display: none;
             text-align: center;
         }
-
-        </style>
-
+    </style>
 </head>
-<body>
-    <div class="content">
-        <h1>Лёвиасейлс</h1>
-    </div>
-
-    <div id="main">
-        <button id="buy">Купить</button>
-    </div>
-
-    <form id="form">
-        <input type="text" placeholder="Имя">
-        <input type="tel" placeholder="Номер телефона">
-        <input type="email" placeholder="Почта">
-    </form>
-
-    <script>
-        let buy = document.getElementById('buy');
-
-        buy.addEventListener('click', ()=> {
-            document.getElementById('main').style.display = none;
-            document.getElementById('form').style.display = block;
-        }
-
-
-
-
-    </script>
-</body>
-</html>
