@@ -60,3 +60,53 @@
         }
     </style>
 </head>
+<body>
+
+    <div class="content">
+        <h1>Лёвиасейлс</h1>
+    </div>
+
+    <div id="main">
+        <button id="buy">Купить</button>
+    </div>
+
+    <form id="form">
+        <input id="name" type="text" placeholder="Имя">
+        <input id="phone" type="tel" placeholder="Номер телефона">
+        <input id="email" type="email" placeholder="Почта">
+        <button type="button" id="send">Отправить</button>
+    </form>
+
+    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
+    <script>
+
+        //Данные выводятся в консоль и можно их передать дальше
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById('buy');
+        let form = document.getElementById('form');
+        let send = document.getElementById('send');
+
+        // Показ формы
+        buy.addEventListener('click', () => {
+            buy.style.display = 'none';
+            form.style.display = 'block';
+        });
+
+        // Сохранение данных в словарь
+        send.addEventListener('click', () => {
+            let userData = {
+                name: document.getElementById('name').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                email: document.getElementById('email').value.trim()
+            };
+
+            console.log("Данные пользователя:", userData);
+
+            Можно, например, отправить в Telegram WebApp
+            tg.sendData(JSON.stringify(userData));
+
+            alert("Данные сохранены!");
+        });
+    </script>
+</body>
+</html>
