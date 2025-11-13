@@ -80,19 +80,19 @@
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
     <script>
 
-        //Данные выводятся в консоль и можно их передать дальше
+
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById('buy');
         let form = document.getElementById('form');
         let send = document.getElementById('send');
 
-        // Показ формы
+
         buy.addEventListener('click', () => {
             buy.style.display = 'none';
             form.style.display = 'block';
         });
 
-        // Сохранение данных в словарь
+
         send.addEventListener('click', () => {
             let userData = {
                 name: document.getElementById('name').value.trim(),
@@ -102,7 +102,6 @@
 
             console.log("Данные пользователя:", userData);
 
-            Можно, например, отправить в Telegram WebApp
             tg.sendData(JSON.stringify(userData));
 
             alert("Данные сохранены!");
