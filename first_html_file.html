@@ -72,9 +72,9 @@
 
     <form id="form">
         <input id="name" type="text" placeholder="Имя">
-        <input id="phone" type="tel" placeholder="Номер телефона">
-        <input id="email" type="email" placeholder="Почта">
-        <button type="button" id="send">Отправить</button>
+        <input id="phone" type="number" placeholder="Номер телефона">
+        <input id="email" type="text" pattern="^[^@]*@[^@]*$" title="Введите email">
+        <button type="button" id="send" >Отправить</button>
     </form>
 
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
